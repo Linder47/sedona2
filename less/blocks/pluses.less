@@ -14,18 +14,23 @@
 .plus-without-picture {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    background-color: #bec7a3;
+    padding-top: 25px;
 }
 
 .pluses__title {
+    display: block;
     padding-left: 70px;
     padding-right: 20px;
     text-align: left;
+    font-size: 21px;
+    line-height: 26px;
 }
 
 .pluses__text {
     padding-left: 70px;
     padding-right: 20px;
+    padding-bottom: 15px;
     text-align: left;
 }
 
@@ -33,30 +38,33 @@
     .pluses-wrapper {
         flex-direction: row;
         flex-wrap: wrap;
-        margin: auto;
     }
 
     .plus-with-photo {
-        display: flex;
         flex-direction: row;
-        margin: auto;
     }
 
     .plus-without-picture {
-        display: flex;
         flex-direction: row;
-        margin: auto;
+        padding-top: 55px;
     }
 
     .pluses__title {
         padding: 0 40px;
         text-align: center;
+        padding-top: 25px;
     }
 
     .pluses__text {
         padding: 0 40px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         text-align: center;
+    }
+}
+
+@media @desktop-width {
+    .pluses__text {
+        padding-bottom: 60px;
     }
 }
 

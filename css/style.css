@@ -492,6 +492,8 @@ body {
 .introduce-wrapper {
   color: #000;
   background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 0;
 }
 .introduce__title {
   font-size: 21px;
@@ -530,16 +532,21 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  margin: auto;
+  background-color: #bec7a3;
+  padding-top: 25px;
 }
 .pluses__title {
+  display: block;
   padding-left: 70px;
   padding-right: 20px;
   text-align: left;
+  font-size: 21px;
+  line-height: 26px;
 }
 .pluses__text {
   padding-left: 70px;
   padding-right: 20px;
+  padding-bottom: 15px;
   text-align: left;
 }
 @media (min-width: 768px) {
@@ -548,44 +555,81 @@ body {
     -webkit-box-direction: normal;
             flex-direction: row;
     flex-wrap: wrap;
-    margin: auto;
   }
   .plus-with-photo {
-    display: -webkit-box;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
-    margin: auto;
   }
   .plus-without-picture {
-    display: -webkit-box;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
-    margin: auto;
+    padding-top: 55px;
   }
   .pluses__title {
     padding: 0 40px;
     text-align: center;
+    padding-top: 25px;
   }
   .pluses__text {
     padding: 0 40px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     text-align: center;
+  }
+}
+@media (min-width: 1280px) {
+  .pluses__text {
+    padding-bottom: 60px;
   }
 }
 .reason {
   background-color: #81b3d2;
   color: #fff;
+  padding-top: 38px;
+  padding-bottom: 20px;
 }
 .reason__title {
   font-size: 21px;
   line-height: 26px;
+  padding: 0 20px;
   padding-top: 40px;
 }
+.reason__text {
+  padding: 0 20px;
+}
+.reason-without-picture {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: auto;
+}
 .reason-three {
-  background-color: #fff;
+  background-color: #eeeeee;
   color: #000;
+  padding: 27px 20px;
+}
+.reason-three__title {
+  font-size: 21px;
+  line-height: 26px;
+}
+@media (min-width: 768px) {
+  .reason-without-picture {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    padding-top: 45px;
+  }
+  .reason-three {
+    padding: 0 35px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+}
+@media (min-width: 1280px) {
+  .reason-three {
+    padding-bottom: 45px;
+  }
 }
