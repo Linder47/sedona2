@@ -12,21 +12,22 @@
     <body>
         <header class="page-header">
             <h1 class="visually-hidden">Седона</h1>
-            <nav class="main-nav">
+            <nav class="main-nav  main-nav--opened"> <!--main-nav--nojs-->
+                <button class="main-nav__toggle" type="button">Закрыть меню</button>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list">
-                        <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+                        <li class="main-nav__item main-nav__item--active main-nav__item--border-bottom"><a>Главная</a></li>
                         <li class="main-nav__item"><a href="#">Фото и видео</a></li>
                         <!--<div class="main-nav__item"></div>-->
                         <li class="main-nav__item"><a href="#">Форма отзыва</a></li>
-                        <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+                        <li class="main-nav__item main-nav__item--border-top"><a href="#">HTML Academy</a></li>
                     </ul>
                 </div>
                 <div class="logo-wrapper">
                     <div class="mini-logo">
                         <img src="#" width="" height="" alt="С">
                     </div>
-                    <button class="main-nav__toggle" type="button">Закрыть меню</button>
+                    <button class="main-nav__toggle-logo" type="button">Закрыть меню</button>
                 </div>
             </nav>
             <div class="page-header__logo">
@@ -105,9 +106,11 @@
             </div>
             </section>
 
-            <h1 class="pluses__question">Заинтересовались?</h1>
-            <p class="pluses__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <button class="btn btn-search" type="button">Поиск гостиницы в Седоне</button>
+            <div class="search">
+            <h1 class="search__question">Заинтересовались?</h1>
+            <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <button class="btn  btn-search" type="button">Найти гостиницу</button>
+            </div>
 
             <div class="map"></div>
 
