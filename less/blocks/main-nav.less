@@ -7,15 +7,25 @@
     color: #fff;
     font-size: 18px;
     line-height: 40px;
+    background-color: @bg-blue;
 
     display: flex;
     flex-direction: column;
-    margin: auto;
 }
 
 .main-nav_wrapper {
     width: auto;
     background-color: @bg-blue;
+}
+
+.main-nav__item-logo {
+    order: 1;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    max-height: 0;
+    position: relative;
 }
 
 .main-nav__item {
@@ -113,9 +123,10 @@
 .main-nav__toggle-logo {
     position: absolute;
     right: 20px;
-    top: 15px;
+    bottom: 15px;
     z-index: 2;
-    display: block;
+    display: flex;
+    order: -1;
     width: 25px;
     height: 25px;
     font-size: 0;
@@ -153,14 +164,27 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 15px 0;
+        //padding: 15px 0;
         align-items: stretch;
         align-content: stretch;
+        background-color: #fff;
     }
 
-    .main-nav_wrapper {
+    .main-nav__wrapper {
         width: auto;
         background-color: #fff;
+        max-height: 55px;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+
+    .main-nav__item-logo {
+        order: 0;
+        width: 20%;
+        z-index: 5;
+        margin-top: 0;
     }
 
     .main-nav__item a[href] {
@@ -168,11 +192,15 @@
         color: #000;
         width: 100%;
         padding: 0 auto;
+        
     }
 
     .main-nav__item {
         border: none;
         padding: 0;
+        width: 20%;
+        padding: 7px 0;
+        padding-bottom: 13px;
     }
 
     .main-nav__item:hover {
