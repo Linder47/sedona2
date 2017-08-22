@@ -19,8 +19,44 @@
 .page-header__logo {
     display: flex;
     margin: auto;
+    padding-top: 78px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 0;
+   // width: 100%;
+
+    background-image: url("../img/intro-background@1x.jpg 1x");
+
+    @media @retina {
+        background-image: url("../img/intro-background@2x.jpg 2x");
+        background-size: 800px auto;
+    }
+}
+
+.page-header__logo img { 
+    //height: 100%;
+    //width: 100%;
+    //font-size: 0;
+    //line-height: 0;
+}
+
+    .logo-wrapper {
+        height: 56px;
+        background-color: #fff;
+    }
+
+.page-header__logo-text {
+    display: flex;
+    margin: auto;
+}
+
+.page-header__logo__wrapper {
+    /*display: flex;
+    flex-direction: column;
+    margin: auto;*/
+    width: 100%;
+
+        background-repeat: no-repeat;
+    background-position: 50% 0;
 
     background-image: url("../img/intro-background@1x.jpg");
 
@@ -30,21 +66,10 @@
     }
 }
 
-    .logo-wrapper {
-        height: 56px;
-        background-color: #fff;
-    }
-
-.page-header__logo-text {
-    //text-align: center;
-    display: flex;
-    margin: auto;
-}
-
 @media @mobile-width-only {
     .page-header__logo {
-    height: 400px;
-    width: 100%;
+        height: 400px;
+        width: 100%;
     }
 }
 
@@ -53,12 +78,32 @@
         background-color: #fff;
     }
 
-        .page-header__logo {
-            width: 100%;
-            height: 518px;
-
-            @media @retina {
-                background-size: 800px auto;
-            }
+    .page-header__logo__wrapper {
+        height: 520px;
+        width: 100%;
     }
+/*
+    .page-header__logo {
+        //width: 100%;
+        width: 100%;
+        height: 520px;
+        line-height: 0;
+        font-size: 0;
+
+        @media @retina {
+             background-size: 800px auto;
+        }
+    } 
+
+    .page-header__logo img {
+        //width: 100%;
+       // height: 100%;
+        //align-content: center;
+    } 
+
+    .page-header__logo__wrapper {
+        //width: 100%;
+        height: 520px;
+    }
+  */  
 }

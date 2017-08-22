@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+    width: 100%;
 }
 
 .reason-three {
     background-color: #eeeeee;
     color: #000;
     padding: 27px 20px;
+}
+
+.reason-three:not(:last-child) {
+    border-bottom: 1px solid #d6d6d6;
 }
 
 .reason-three__title {
@@ -18,13 +23,19 @@
 @media @tablet-width {
     .reason-without-picture {
         flex-direction: row;
-        padding-top: 45px;
+        //padding-top: 45px;
+        max-height: 255px;
     }
 
     .reason-three {
         padding: 0 35px;
-        padding-top: 45px;
+       padding-top: 45px;
         padding-bottom: 25px;
+    }
+
+    .reason-three__wrapper {
+     //   display: flex;
+   //     margin: auto;
     }
 }
 
