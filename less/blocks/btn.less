@@ -1,8 +1,8 @@
 .btn {
     display: inline-block;
-    padding: 10px 33px;
+    padding: 15px 33px;
 
-    font-size: 14px;
+    font-size: 21px;
     line-height: 26px;
     font-family: "PT Sans", "Arial", sans-serif;
     text-transform: uppercase;
@@ -26,4 +26,10 @@
 .btn:active {
     background-color: @color-mobile-down;
     color: @color-mobile-text-down;
+}
+
+@media @tablet-width {
+    .btn:disabled {
+        background-color: @color-mobile-disabled;
+    }
 }

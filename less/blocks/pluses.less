@@ -11,8 +11,6 @@
     flex-direction: column;
     margin: auto;
     width: 100%;
-    //font-size: 0;
-   // line-height: 0;
 }
 
 .plus-without-picture {
@@ -42,6 +40,7 @@
     width: 100%;
     font-size: 0;
     line-height: 0;
+    max-height: 250px;
 }
 
 .picture img {
@@ -55,22 +54,27 @@
     position: relative;
 }
 
-.plus-column-wrapper::before {
+.pluses__title::before {
     content: "";
     position: absolute;
     display: block;
-    left: 0;
+    left: 20px;
     top: -10px;
     height: 40px;
     width: 40px;
 }
 
-.pluses__img-house::before {
-    background-image: url("../img/icon-house.svg");
+.pluses__img--house::before {
+    background: url("../img/icon-house-mobile.svg") no-repeat;
 }
 
-.pluses__img-souvenirs {
-    background: #fff url("../img/icon-gift.svg") no-repeat;
+.pluses__img--gift::before {
+    margin-left: 5px;
+    background: #fff url("../img/icon-gift-mobile.svg") no-repeat;
+}
+
+.pluses__img--food::before {
+    background: #fff url("../img/icon-burger-mobile.svg") no-repeat;
 }
 
 @media @tablet-width {
@@ -88,7 +92,6 @@
     .plus-without-picture {
         flex-direction: row;
         padding-top: 55px;
-        z-index: 7;
     }
 
     .pluses__title {
@@ -103,9 +106,7 @@
         text-align: center;
     }
 
-
     .picture img {
-        //max-height: 255px;
         width: 100%;
         height: auto;
         align-content: center;
@@ -115,6 +116,36 @@
         max-height: 255px;
         line-height: 0;
         font-size: 0;
+    }
+
+    .plus-column-wrapper {
+        padding-top: 52px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .pluses__title::before {
+       top: 0;
+        left: 40%;
+        margin: auto;
+        height: 80px;
+        width: 77px;
+    }
+
+    .pluses__img--house::before {
+        background: #fff url("../img/icon-house-tablet.svg") no-repeat;
+    }
+
+    .pluses__img--gift::before {
+        margin-left: 0;
+        background: #fff url("../img/icon-gift-tablet.svg") no-repeat;
+    }
+
+    .pluses__img--food::before {
+        background: #fff url("../img/icon-burger-desktop.svg") no-repeat;
     }
 }
 
