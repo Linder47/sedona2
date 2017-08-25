@@ -77,7 +77,21 @@
     background: #fff url("../img/icon-burger-mobile.svg") no-repeat;
 }
 
+@media @mobile-width-only {
+    .plus-with-photo--triangle {
+    padding-top: 47px;
+    background-repeat: no-repeat;
+    background-position: center top; 
+    background-size: 768px 45px;
+    background-image: url("../img/white-copy-mobile@2x.svg"); 
+    }
+}
+
 @media @tablet-width {
+    .plus-with-photo--triangle {
+        display: none;
+    }
+
     .pluses-wrapper {
         flex-direction: row;
         flex-wrap: wrap;
