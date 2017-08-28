@@ -393,7 +393,7 @@ template {
 /*@import "mixins.less";*/
 html,
 body {
-  background-color: #ff78de;
+  background-color: #e9e;
   margin: 0;
   padding: 0;
 }
@@ -611,18 +611,13 @@ body {
 .main-nav--closed .main-nav__toggle {
   display: none;
 }
-.main-nav--closed .main-nav {
-  display: none;
-}
-.main-nav--closed .main-nav__list {
-  display: none;
-}
 .main-nav--closed .main-nav__item {
   display: none;
   position: absolute;
 }
-.main-nav--closed .main-nav__wrapper {
-  display: none;
+.main-nav--closed .main-nav__item-logo {
+  display: -webkit-box;
+  display: flex;
 }
 .logo-wrapper {
   position: relative;
@@ -1296,6 +1291,7 @@ body {
   -webkit-box-direction: normal;
           flex-direction: column;
   padding-bottom: 15px;
+  background-color: #fff;
 }
 .photo-block__title {
   padding: 0;
@@ -1312,7 +1308,6 @@ body {
   padding-top: 10px;
   display: inline-block;
   line-height: 0;
-  vertical-align: top;
 }
 .photo-block__icon-like {
   display: -webkit-box;
@@ -1320,6 +1315,10 @@ body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
+  margin-top: 9px;
+}
+.photo-block__text b {
+  padding-top: 10px;
 }
 .photo {
   width: 100%;
@@ -1341,26 +1340,65 @@ body {
     border-bottom: none;
     padding: 0;
   }
+  .photo-post__block:first-child {
+    width: 100%;
+  }
+  .photo-post__block:not(:first-child) {
+    width: 50%;
+  }
   .photo-block__under-text {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
-    background-color: #888;
+    background-color: #f2f2f2;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    padding: 0 15px;
+    padding: 15px 15px;
+    padding-top: 10px;
+  }
+  .photo-block__under-text--gray {
+    background-color: #eaeaea;
   }
   .photo-post__wrapper {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+  }
+  .under-text__about {
+    padding: 0;
+    margin: 0;
+  }
+  .photo {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+  }
+  .photo img {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
   }
 }
 @media (min-width: 1280px) {
   .photo--container {
     padding: 0;
+  }
+  .photo-post__block:not(:first-child) {
+    width: 33.333%;
+  }
+  .photo-post__block {
+    color: #fff;
+  }
+  .photo-block__under-text {
+    z-index: 5;
+    margin-top: -81px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .photo-block__icon-like svg {
+    fill: #fff;
   }
 }
