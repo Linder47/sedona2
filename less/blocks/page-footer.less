@@ -13,6 +13,7 @@
 }
 
 .page-footer__hashtag {
+    background-color: #444;
     text-align: center;
     height: 82px;
     display: flex;
@@ -20,7 +21,7 @@
 }
 
 .hashtag__wrapper {
-     margin: auto;
+    margin: auto;
 }
 
 .hashtag__wrapper b {
@@ -145,6 +146,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
+        
     }
 
     .page-footer__social {
@@ -159,10 +161,36 @@
         height: inherit;
         margin: auto;
     }
+
+    .hashtag__wrapper--other-pages {
+        margin-left: 0;
+    }
+
+    .page-footer--other-pages  .copyright__wrapper {
+        margin-right: 0;
+    }
 }
 
 @media @desktop-width {
     .page-footer__wrapper {
         width: 1200px;
+    }
+
+    .hashtag__wrapper--other-pages {
+        margin: auto;
+    }
+
+    .copyright__wrapper {
+        margin-right: 0;
+        padding-right: 44px;
+    }
+
+    .page-footer--other-pages  .copyright__wrapper {
+        padding-right: 44px;
+    }
+
+    .photo--container {
+        width: 1200px;
+        margin: auto;
     }
 }

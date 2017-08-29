@@ -393,7 +393,7 @@ template {
 /*@import "mixins.less";*/
 html,
 body {
-  background-color: #e9e;
+  background-color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -1023,6 +1023,9 @@ body {
   -webkit-box-direction: normal;
           flex-direction: column;
 }
+.search--video {
+  padding-bottom: 0;
+}
 .search__wrapper {
   width: 100%;
   background-color: #fff;
@@ -1047,6 +1050,20 @@ body {
   .search__text {
     padding-bottom: 30px;
     padding-top: 10px;
+  }
+  .search__text--video {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .search--video {
+    padding: 0 280px;
+    padding-bottom: 55px;
+    padding-top: 40px;
+  }
+  .search {
+    padding-left: 230px;
+    padding-right: 230px;
   }
 }
 .btn {
@@ -1100,6 +1117,7 @@ body {
   width: 100%;
 }
 .page-footer__hashtag {
+  background-color: #444;
   text-align: center;
   height: 82px;
   display: -webkit-box;
@@ -1261,10 +1279,30 @@ body {
     height: inherit;
     margin: auto;
   }
+  .hashtag__wrapper--other-pages {
+    margin-left: 0;
+  }
+  .page-footer--other-pages .copyright__wrapper {
+    margin-right: 0;
+  }
 }
 @media (min-width: 1280px) {
   .page-footer__wrapper {
     width: 1200px;
+  }
+  .hashtag__wrapper--other-pages {
+    margin: auto;
+  }
+  .copyright__wrapper {
+    margin-right: 0;
+    padding-right: 44px;
+  }
+  .page-footer--other-pages .copyright__wrapper {
+    padding-right: 44px;
+  }
+  .photo--container {
+    width: 1200px;
+    margin: auto;
   }
 }
 .map {
@@ -1328,6 +1366,10 @@ body {
 .photo img {
   height: 100%;
   width: 100%;
+}
+.photo--container {
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .photo--container {
@@ -1400,5 +1442,44 @@ body {
   }
   .photo-block__icon-like svg {
     fill: #fff;
+  }
+}
+.video {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  background-color: #fff;
+}
+.video__wrapper {
+  margin: auto;
+  height: 300px;
+  width: 320px;
+}
+.volume__wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 7;
+  margin-top: -15px;
+}
+.volume__scale {
+  height: 3px;
+}
+@media (min-width: 768px) {
+  .video__wrapper {
+    height: 499px;
+    width: 648px;
+  }
+}
+@media (min-width: 1280px) {
+  .video__wrapper {
+    height: 500px;
+    width: 800px;
   }
 }

@@ -8,6 +8,10 @@
     flex-direction: column;  
 }
 
+.search--video {
+    padding-bottom: 0;
+}
+
 .search__wrapper {
     width: 100%;
     background-color: #fff;
@@ -38,5 +42,22 @@
     .search__text {
         padding-bottom: 30px;
         padding-top: 10px;
+    }
+
+    .search__text--video {
+        padding-bottom: 0;
+    }
+}
+
+@media @desktop-width {
+    .search--video {
+        padding: 0 280px;
+        padding-bottom: 55px;
+        padding-top: 40px;
+    }
+
+    .search {
+        padding-left: 230px;
+        padding-right: 230px;
     }
 }
