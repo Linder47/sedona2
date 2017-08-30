@@ -23,13 +23,15 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
 
-    background-image: url("../img/intro-background@1x.jpg 1x");
+  /*  background-image: url("../img/intro-background@1x.jpg 1x");
 
     @media @retina {
         background-image: url("../img/intro-background@2x.jpg 2x");
         background-size: 800px auto;
     }
+    */
 }
+
 
     .logo-wrapper {
         height: 56px;
@@ -55,6 +57,17 @@
     }
 }
 
+.page-header__logo__wrapper--other-pages {
+    height: 160px;
+    background-position: center bottom, 5% 70%;
+}
+
+.page-header__logo-text--other-pages {
+    width: 229px;
+    height: 39px;
+    margin-top: -27px;
+}
+
 @media @mobile-width-only {
     .page-header__logo {
         height: 400px;
@@ -78,6 +91,18 @@
             background-size: 800px auto;
         }
     } 
+
+    .page-header__logo__wrapper--other-pages {
+        height: 290px;
+        width: 100%;
+        background-position: center bottom, 5% 80%;
+    }
+
+    .page-header__logo-text--other-pages {
+        width: 458px;
+        height: 78px;
+        //margin-top: -27px;
+    }
 }
 
 @media @desktop-width {
