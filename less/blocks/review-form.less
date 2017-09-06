@@ -1,0 +1,164 @@
+.review-form {
+    width: 100%;
+}
+
+.review-form__wrapper {
+    width: 100%;
+    background-color: #dad;
+}
+
+.review-form__block {
+    padding: 20px;
+}
+
+.review-form__block {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border: none;
+    border-top: 1px solid @color-mobile-disabled;
+    padding: 0 20px;
+    padding-top: 67px;
+    padding-bottom: 25px;
+}
+
+.review-form__block-title {
+    position: absolute;
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding-top: 22px;
+    left: 0;
+    text-align: center;
+    top: 0;
+}
+
+.review-form__block--name  .review-form__block--wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.review-form__block input {
+    font-size: 18px;
+    color: #000;
+    line-height: 26px;
+    text-transform: none;
+      padding: 0;
+   padding-left: 20px;
+   height: 50px;
+   border: 4px solid transparent;
+   background-color: #f2f2f2;
+   outline: none;
+}
+
+.review-form__block input:hover {
+    background-color: @color-mobile-disabled;
+}
+
+.review-form__block input:focus {
+    background-color: #f2f2f2;
+    border: 4px solid @color-mobile-disabled;
+}
+
+
+
+.review-form__block--name input {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.review-form__block--contacts {
+    padding-right: 20px;
+}
+
+.review-form__block--contacts  .review-form__block--wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form__block--contacts  input {
+    margin-top: 10px;
+}
+
+.review-form__block--contacts  .review-form__text-label {
+    padding-left: 20px;
+}
+
+.review-form__block-error {
+    text-transform: none;
+    color: #ff5c5c;
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.review-form__block--name  .review-form__text-label {
+    padding-right: 20px;
+}
+
+.review-form__block--contacts  .review-form__phone-label::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/phone@2x.svg);
+    background-size: 18px 18px;
+    display: block;
+    align-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 58px;
+    height: 58px;
+    top: 36px;
+    right: 0;
+    background-color: #e6e6e6;
+}
+
+.review-form__block--contacts  .review-form__mail-label::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/mail@2x.svg);
+    background-size: 18px 18px;
+    display: block;
+    align-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 58px;
+    height: 58px;
+    top: 36px;
+    right: 0;
+    background-color: #e6e6e6;
+}
+
+.review-form__block--contacts  .review-form__phone-label,
+.review-form__block--contacts  .review-form__mail-label
+ {
+    position: relative;
+}
+
+.review-form__radio-label {
+    position: relative;
+    //height: 56px;
+}
+
+.review-form__radio-label::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background-color: #de6;
+    border-radius: 50%;
+    left: 0;
+}
+
+.review-form__block--radio  input {
+    //display: none;
+    //height: 56px;
+}
+
+.review-form__block--checkbox  .review-form__block--wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

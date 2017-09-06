@@ -56,8 +56,8 @@
                 <button class="main-nav__toggle" type="button">Закрыть меню</button>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list">
-                        <li class="main-nav__item  main-nav__item--active  main-nav__item--border-bottom"><a>Главная</a></li>
-                        <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
+                        <li class="main-nav__item"><a href="index.html">Главная</a></li>
+                        <li class="main-nav__item  main-nav__item--active main-nav__item--border-bottom"><a href="photo.html">Фото и видео</a></li>
                         <li class="main-nav__item-logo">
                             <a>
                                 <picture>
@@ -66,7 +66,7 @@
                                 </picture>
                             </a>
                         </li>
-                        <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+                        <li class="main-nav__item"><a>Форма отзыва</a></li>
                         <li class="main-nav__item main-nav__item--border-top"><a href="#">HTML Academy</a></li>
                     </ul>
                 </div>
@@ -75,121 +75,101 @@
                     <button class="main-nav__toggle-logo" type="button">Закрыть/открыть меню</button>
                 </div>
             </nav>
-            <div class="page-header__logo__wrapper">
-                <div class="page-header__logo">
-                    <div class="page-header__logo-text">
-                        <picture>
-                            <source media="(min-width: 1280px)" srcset="img/text-logo-desktop.svg">
-                            <source media="(min-width: 768px)" srcset="img/text-logo-tablet.svg">
-                            <img src="img/text-logo-mobile.svg" width="" height="" alt="Седона">
-                        </picture>
+            <div class="page-header__logo__wrapper  page-header__logo__wrapper--other-pages">
+                <div class="page-header__logo  page-header__logo--other-pages">
+                    <div class="page-header__logo-text  page-header__logo-text--other-pages">
+                       <!-- <picture>
+                            <source media="(min-width: 1210px)" srcset="img/sedona-desktop@2x.svg">
+                            <source media="(min-width: 768px)" srcset="img/SEDONA@2x.svg">
+                            <img src="img/sedona-mobile@2x.svg" alt="Седона">
+                        </picture>-->
                     </div>
                 </div>
             </div>
         </header>
 
+
         <section class="introduce">
-            <div class="introduce-wrapper container">
-                <h2 class="introduce__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h2>
-                <p class="introduce__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            <div class="introduce-wrapper  introduce--other-pages  container ">
+                <h2 class="introduce__title">Оставьте свой отзыв</h2>
+                <p class="introduce__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
             </div>
         </section>
 
-        <section class="pluses">
-            <div class="pluses-wrapper">
-                <div class="plus-with-photo">
-                    <div class="reason  plus-with-photo--triangle">
-                        <b class="reason__title">НАСТОЯЩИЙ ГОРОДОК</b>
-                        <p class="reason__text">— №1 —</p>
-                        <p class="reason__text">СЕДОНА — НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+        <form class="review-form" menthod="post" action="form.html">
+            <div class="review-form__wrapper">
+                <fieldset class="review-form__block  review-form__block--name">
+                    <legend class="review-form__block-title"><span>Представьтесь, пожалуйста</span></legend>
+                    <div class="review-form__block--wrapper">
+                        <label class="review-form__text-label" for="name">Имя:</label>
+                        <input id="name" type="text" placeholder="Петр">
                     </div>
-
-                    <div class="picture">
-                        <picture>
-                            <source media="(min-width: 1210px)" srcset="img/photo-city-desktop@1x.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
-                            <source media="(min-width: 520px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
-                            <img src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@1x.jpg 1x, img/photo-city-mobile@2x.jpg 2x" alt="City">
-                        </picture>
+                    <div class="review-form__block--wrapper">
+                        <label class="review-form__text-label" for="surname">Фамилия:</label>
+                        <input id="surname" type="text" placeholder="Иванов">
                     </div>
-                </div>
-
-                <div class="plus-without-picture">
-                    <div class="plus-column-wrapper">
-
-                        <b class="pluses__title  pluses__img--house">Жилье</b>
-                        <p class="pluses__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    <div class="review-form__block--wrapper">
+                        <label class="review-form__text-label" for="father">Отчество:</label>
+                        <input id="father" type="text" placeholder="Александрович">
                     </div>
-                    <div class="plus-column-wrapper">
-
-                        <b class="pluses__title  pluses__img--food">ЕДА</b>
-                        <p class="pluses__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                </fieldset>
+                <fieldset class="review-form__block  review-form__block--contacts">
+                    <legend class="review-form__block-title">Контактная информация:</legend>
+                    <div class="review-form__block--wrapper">
+                        <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
+                        <input class="icon-phone" id="phone" type="text" placeholder="Введите телефон">
+                        <p class="review-form__block-error">Ошибка, перепроверьте номер</p>
                     </div>
-                    <div class="plus-column-wrapper">
-
-                        <b class="pluses__title  pluses__img--gift">СУВЕНИРЫ</b>
-                        <p class="pluses__text">Не только китайского, но и местного производства!</p>
+                    <div class="review-form__block--wrapper">
+                        <label class="review-form__mail-label" for="mail">Электронная почта:</label>
+                        <input class="icon-mail" id="mail" type="text" placeholder="Введите e-mail">
                     </div>
-                </div>
-
-                <div class="plus-with-photo">
-
-                    <div class="picture">
-                        <picture>
-                            <source media="(min-width: 1210px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-                            <source media="(min-width: 520px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                            <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@1x.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x" alt="Bridge">
-                        </picture>
+                </fieldset>
+                <fieldset class="review-form__block  review-form__block--radio">
+                    <legend class="review-form__block-title">Ваше общее впечатление:</legend>
+                    <div class="review-form__block--wrapper">
+                        <input id="good" name="impression" type="radio" value="good" checked>
+                        <label class="review-form__radio-label" for="good">Скорее положительное</label>
                     </div>
-
-                    <div class="reason">
-                        <b class="reason__title">ТАМ ЕСТЬ Мост дьявола</b>
-                        <p class="reason__text">— №2 —</p>
-                        <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                    <div class="review-form__block--wrapper">
+                        <input id="bad" name="impression" type="radio" value="bad">
+                        <label class="review-form__radio-label" for="bad">Скорее отрицательное</label>
                     </div>
-
-                </div>
-
-                <div class="reason-without-picture">
-                    <!--<div class="reason-three__wrapper">-->
-                    <div class="reason-three">
-                        <b class="reason-three__title">НЕБОЛЬШАЯ<br> ПЛОЩАДЬ</b>
-                        <p class="reason-three__text">— №3 —</p>
-                        <p class="reason-three__text">ВСЕ достопримеча-<br>тельности находятся очень близко</p>
+                    <div class="review-form__block--wrapper">
+                        <input id="idk" name="impression" type="radio" value="idk">
+                        <label class="review-form__radio-label" for="idk">Затрудняюсь ответить</label>
                     </div>
-
-
-                    <div class="reason-three">
-                        <b class="reason-three__title">КРАСИВАЯ<br> ДОРОГА</b>
-                        <p class="reason-three__text">— №4 —</p>
-                        <p class="reason-three__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                </fieldset>
+                <fieldset class="review-form__block  review-form__block--checkbox">
+                    <legend class="review-form__block-title">Посещенные достопримечательности:</legend>
+                    <div class="review-form__block--wrapper">
+                        <input id="devils-bridge" name="sight" type="checkbox" value="devils-bridge" checked>
+                        <label class="review-form__radio-label" for="devils-bridge">Мост дьявола</label>
                     </div>
-
-
-                    <div class="reason-three">
-                        <b class="reason-three__title">МАЛО<br> ТУРИСТОВ</b>
-                        <p class="reason-three__text">— №5 —</p>
-                        <p class="reason-three__text">Большинство едет в гранд каньон и толпится там</p>
+                    <div class="review-form__block--wrapper">
+                        <input id="slide-park" name="sight" type="checkbox" value="slide-park" checked>
+                        <label class="review-form__radio-label" for="slide-park">Слай-дпарк</label>
                     </div>
-
-                </div>
+                    <div class="review-form__block--wrapper">
+                        <input id="mountain-bell" name="sight" type="checkbox" value="mountain-bell">
+                        <label class="review-form__radio-label" for="mountain-bell">Гора-Колокол</label>
+                    </div>
+                    <div class="review-form__block--wrapper">
+                        <input id="red-rocks" name="sight" type="checkbox" value="red-rocks" checked>
+                        <label class="review-form__radio-label" for="red-rocks">Красные скалы</label>
+                    </div>
+                </fieldset>
+                <fieldset class="review-form__block  review-form__block--emotions">
+                    <legend class="review-form__block-title">Опишите свои эмоции:</legend>
+                    <textarea class="block-title__emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+                </fieldset>
+                <button class="btn  btn-search" type="button">Отправить отзыв</button>
             </div>
-        </section>
+        </form>
 
-        <div class="search">
-            <div class="search__wrapper">
-                <h1 class="search__question">Заинтересовались?</h1>
-                <p class="search__text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-                <button class="btn  btn-search" type="button">Найти гостиницу</button>
-            </div>
-        </div>
-
-        <div class="map">
-            <div class="map__wrapper" id="map"></div>
-        </div>
-
-        <footer class="page-footer">
+        <footer class="page-footer  page-footer--other-pages">
             <div class="page-footer__hashtag">
-                <div class="hashtag__wrapper">
+                <div class="hashtag__wrapper  hashtag__wrapper--other-pages">
                     <b>#visitsedona</b>
                 </div>
             </div>
@@ -207,7 +187,7 @@
                 </div>
             </div>
             <div class="page-footer__copyright">
-                <div class="copyright__wrapper">
+                <div class="copyright__wrapper  copyright__wrapper--other-pages">
                     <p>Разработано: </p>
                     <a class="page-footer__copyright-link" href="#">html-academy
                                     <svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
@@ -215,10 +195,12 @@
                 </div>
             </div>
         </footer>
+
     </div>
     <script src="js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4W7HBQg2t4_3yYhk5GqEHreGCUMUBQqM&amp;callback=initMap" async
         defer></script>
+    </div>
 </body>
 
 </html>
