@@ -78,7 +78,7 @@
             <div class="page-header__logo__wrapper  page-header__logo__wrapper--other-pages">
                 <div class="page-header__logo  page-header__logo--other-pages">
                     <div class="page-header__logo-text  page-header__logo-text--other-pages">
-                       <!-- <picture>
+                        <!-- <picture>
                             <source media="(min-width: 1210px)" srcset="img/sedona-desktop@2x.svg">
                             <source media="(min-width: 768px)" srcset="img/SEDONA@2x.svg">
                             <img src="img/sedona-mobile@2x.svg" alt="Седона">
@@ -99,7 +99,8 @@
         <form class="review-form" menthod="post" action="form.html">
             <div class="review-form__wrapper">
                 <fieldset class="review-form__block  review-form__block--name">
-                    <legend class="review-form__block-title"><span>Представьтесь, пожалуйста</span></legend>
+                    <legend class="review-form__block-title  review-form__block-title--mobile-desktop">Представьтесь, пожалуйста</legend>
+                    <legend class="review-form__block-title  review-form__block-title--tablet-only">Представьтесь:</legend>
                     <div class="review-form__block--wrapper">
                         <label class="review-form__text-label" for="name">Имя:</label>
                         <input id="name" type="text" placeholder="Петр">
@@ -116,9 +117,12 @@
                 <fieldset class="review-form__block  review-form__block--contacts">
                     <legend class="review-form__block-title">Контактная информация:</legend>
                     <div class="review-form__block--wrapper">
-                        <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
+                        <div class="line__wrapper">
+                            <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
+                            <p class="review-form__block-error  review-form__block-error--tablet">Ошибка, перепроверьте номер</p>
+                        </div>
                         <input class="icon-phone" id="phone" type="text" placeholder="Введите телефон">
-                        <p class="review-form__block-error">Ошибка, перепроверьте номер</p>
+                        <p class="review-form__block-error  review-form__block-error--mobile">Ошибка, перепроверьте номер</p>
                     </div>
                     <div class="review-form__block--wrapper">
                         <label class="review-form__mail-label" for="mail">Электронная почта:</label>
@@ -144,26 +148,28 @@
                     <legend class="review-form__block-title">Посещенные достопримечательности:</legend>
                     <div class="review-form__block--wrapper">
                         <input id="devils-bridge" name="sight" type="checkbox" value="devils-bridge" checked>
-                        <label class="review-form__radio-label" for="devils-bridge">Мост дьявола</label>
+                        <label class="review-form__checkbox-label" for="devils-bridge">Мост дьявола</label>
                     </div>
                     <div class="review-form__block--wrapper">
                         <input id="slide-park" name="sight" type="checkbox" value="slide-park" checked>
-                        <label class="review-form__radio-label" for="slide-park">Слай-дпарк</label>
+                        <label class="review-form__checkbox-label" for="slide-park">Слайд-парк</label>
                     </div>
                     <div class="review-form__block--wrapper">
                         <input id="mountain-bell" name="sight" type="checkbox" value="mountain-bell">
-                        <label class="review-form__radio-label" for="mountain-bell">Гора-Колокол</label>
+                        <label class="review-form__checkbox-label" for="mountain-bell">Гора-Колокол</label>
                     </div>
                     <div class="review-form__block--wrapper">
                         <input id="red-rocks" name="sight" type="checkbox" value="red-rocks" checked>
-                        <label class="review-form__radio-label" for="red-rocks">Красные скалы</label>
+                        <label class="review-form__checkbox-label" for="red-rocks">Красные скалы</label>
                     </div>
                 </fieldset>
                 <fieldset class="review-form__block  review-form__block--emotions">
                     <legend class="review-form__block-title">Опишите свои эмоции:</legend>
                     <textarea class="block-title__emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
                 </fieldset>
-                <button class="btn  btn-search" type="button">Отправить отзыв</button>
+                <div class="form__wrapper-button">
+                    <button class="btn  btn-form" type="button">Отправить отзыв</button>
+                </div>
             </div>
         </form>
 
