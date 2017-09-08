@@ -1726,6 +1726,8 @@ textarea {
   padding: 0 20px;
   padding-top: 67px;
   padding-bottom: 25px;
+  margin-right: 0;
+  margin-left: 0;
 }
 .review-form__block-title,
 .review-form__block-title2 {
@@ -1783,6 +1785,7 @@ textarea {
 }
 .review-form__block--contacts input {
   margin-top: 10px;
+  width: 100%;
 }
 .review-form__block--contacts .review-form__phone-label,
 .review-form__block--contacts .review-form__mail-label {
@@ -1799,22 +1802,7 @@ textarea {
 .review-form__block--name .review-form__text-label {
   padding-right: 20px;
 }
-.review-form__block--contacts .review-form__phone-label::after {
-  content: "";
-  position: absolute;
-  background-image: url(../img/phone@2x.svg);
-  background-size: 18px 18px;
-  display: block;
-  align-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 58px;
-  height: 58px;
-  top: 36px;
-  right: 0;
-  background-color: #e6e6e6;
-}
-.review-form__block--contacts .review-form__mail-label::after {
+.icon-mail__wrapper::after {
   content: "";
   position: absolute;
   background-image: url(../img/mail@2x.svg);
@@ -1825,12 +1813,14 @@ textarea {
   background-repeat: no-repeat;
   width: 58px;
   height: 58px;
-  top: 36px;
+  top: 10px;
   right: 0;
   background-color: #e6e6e6;
 }
 .review-form__block--contacts .review-form__phone-label,
-.review-form__block--contacts .review-form__mail-label {
+.icon-phone__wrapper,
+.review-form__block--contacts .review-form__mail-label,
+.icon-mail__wrapper {
   position: relative;
 }
 .review-form__radio-label,
@@ -1886,6 +1876,21 @@ input[type=radio]:checked + .review-form__radio-label::before {
   left: 0;
   top: 3px;
 }
+.icon-phone__wrapper::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/phone@2x.svg);
+  background-size: 18px 18px;
+  display: block;
+  align-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 58px;
+  height: 58px;
+  top: 10px;
+  right: 0;
+  background-color: #e6e6e6;
+}
 input[type=checkbox]:checked + .review-form__checkbox-label::before {
   background-image: url(../img/tick@2x.svg);
   color: #333;
@@ -1927,14 +1932,26 @@ input[type=checkbox]:checked + .review-form__checkbox-label::before {
   margin: 0 20px;
   margin-bottom: 42px;
 }
+.icon-phone__wrapper {
+  padding-right: 24px;
+}
+.icon-mail__wrapper {
+  padding-right: 24px;
+}
+.block--checkbox__wrapper {
+  margin-top: 17px;
+}
 @media (max-width:767px) {
   .review-form__block-title--tablet-only,
-  .review-form__block-error--tablet {
+  .review-form__block-error--tablet,
+  .review-form__block-error--desktop,
+  .obligatory-field {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .review-form__block-title--mobile-desktop {
+  .review-form__block-title--mobile-desktop,
+  .review-form__block-error--desktop {
     display: none;
   }
   .review-form {
@@ -1986,6 +2003,7 @@ input[type=checkbox]:checked + .review-form__checkbox-label::before {
   }
   .review-form__block--contacts {
     width: 100%;
+    padding-top: 65px;
   }
   .line__wrapper {
     display: -webkit-box;
@@ -1998,8 +2016,101 @@ input[type=checkbox]:checked + .review-form__checkbox-label::before {
     margin: 0;
     padding: 0;
     position: relative;
+    -webkit-box-align: baseline;
+            align-items: baseline;
+    max-height: 33px;
   }
   .review-form__block-error--mobile {
     display: none;
+  }
+  .review-form__mail-label {
+    padding-top: 24px;
+  }
+  /* .review-form__block--contacts {
+         position: none;
+         border-left: 1px solid @color-mobile-disabled;
+     }
+     */
+  .review-form__block--checkbox {
+    width: 100%;
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+  .review-form__block--emotions {
+    width: 100%;
+  }
+  .review-form__block-title--tablet-width {
+    width: 400px;
+  }
+  .review-form__block--tablet-border {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 15px;
+  }
+  .review-form__block--tablet-border .review-form__block-title,
+  .review-form__block--tablet-border .review-form__block-title2 {
+    position: relative;
+  }
+  .block-title__emotions {
+    margin-top: 42px;
+  }
+  .block--checkbox__wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  .block--checkbox__wrapper .review-form__block--wrapper {
+    width: 50%;
+  }
+  .review-form__block--emotions .review-form__block-title,
+  .review-form__block--checkbox .review-form__block-title,
+  .review-form__block--contacts .review-form__block-title {
+    padding-top: 0px;
+  }
+  .review-form__block--emotions {
+    margin-top: 55px;
+  }
+  .review-form__block--checkbox {
+    margin-top: 52px;
+  }
+  .review-form__block--contacts {
+    margin-top: 45px;
+  }
+  .form__wrapper-button {
+    margin: 0;
+    width: 50%;
+  }
+  .form__button-field {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin-top: 58px;
+    margin-bottom: 60px;
+  }
+  .obligatory-field {
+    right: 0;
+  }
+  .review-form__radio-label {
+    padding-top: 15px;
+    padding-bottom: 38px;
+  }
+}
+@media (min-width: 1280px) {
+  .review-form__block-error--tablet {
+    display: none;
+  }
+  .review-form__block-error--desktop {
+    display: -webkit-box;
+    display: flex;
+    padding-bottom: 0;
   }
 }

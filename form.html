@@ -114,19 +114,24 @@
                         <input id="father" type="text" placeholder="Александрович">
                     </div>
                 </fieldset>
-                <fieldset class="review-form__block  review-form__block--contacts">
-                    <legend class="review-form__block-title">Контактная информация:</legend>
+                <fieldset class="review-form__block  review-form__block--contacts  review-form__block--tablet-border">
+                    <legend class="review-form__block-title  review-form__block-title--tablet-width">Контактная информация:</legend>
                     <div class="review-form__block--wrapper">
+                        <p class="review-form__block-error  review-form__block-error--desktop">Ошибка, перепроверьте номер</p>
                         <div class="line__wrapper">
                             <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
                             <p class="review-form__block-error  review-form__block-error--tablet">Ошибка, перепроверьте номер</p>
                         </div>
-                        <input class="icon-phone" id="phone" type="text" placeholder="Введите телефон">
+                        <div class="icon-phone__wrapper">
+                            <input class="icon-phone" id="phone" type="tel" placeholder="Введите телефон">
+                        </div>
                         <p class="review-form__block-error  review-form__block-error--mobile">Ошибка, перепроверьте номер</p>
                     </div>
                     <div class="review-form__block--wrapper">
                         <label class="review-form__mail-label" for="mail">Электронная почта:</label>
-                        <input class="icon-mail" id="mail" type="text" placeholder="Введите e-mail">
+                        <div class="icon-mail__wrapper">
+                            <input class="icon-mail" id="mail" type="text" placeholder="Введите e-mail">
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset class="review-form__block  review-form__block--radio">
@@ -144,31 +149,36 @@
                         <label class="review-form__radio-label" for="idk">Затрудняюсь ответить</label>
                     </div>
                 </fieldset>
-                <fieldset class="review-form__block  review-form__block--checkbox">
-                    <legend class="review-form__block-title">Посещенные достопримечательности:</legend>
-                    <div class="review-form__block--wrapper">
-                        <input id="devils-bridge" name="sight" type="checkbox" value="devils-bridge" checked>
-                        <label class="review-form__checkbox-label" for="devils-bridge">Мост дьявола</label>
-                    </div>
-                    <div class="review-form__block--wrapper">
-                        <input id="slide-park" name="sight" type="checkbox" value="slide-park" checked>
-                        <label class="review-form__checkbox-label" for="slide-park">Слайд-парк</label>
-                    </div>
-                    <div class="review-form__block--wrapper">
-                        <input id="mountain-bell" name="sight" type="checkbox" value="mountain-bell">
-                        <label class="review-form__checkbox-label" for="mountain-bell">Гора-Колокол</label>
-                    </div>
-                    <div class="review-form__block--wrapper">
-                        <input id="red-rocks" name="sight" type="checkbox" value="red-rocks" checked>
-                        <label class="review-form__checkbox-label" for="red-rocks">Красные скалы</label>
+                <fieldset class="review-form__block  review-form__block--checkbox  review-form__block--tablet-border">
+                    <legend class="review-form__block-title  review-form__block-title--tablet-width">Посещенные<br> достопримечательности:</legend>
+                    <div class="block--checkbox__wrapper">
+                        <div class="review-form__block--wrapper">
+                            <input id="devils-bridge" name="sight" type="checkbox" value="devils-bridge" checked>
+                            <label class="review-form__checkbox-label" for="devils-bridge">Мост дьявола</label>
+                        </div>
+                        <div class="review-form__block--wrapper">
+                            <input id="slide-park" name="sight" type="checkbox" value="slide-park" checked>
+                            <label class="review-form__checkbox-label" for="slide-park">Слайд-парк</label>
+                        </div>
+                        <div class="review-form__block--wrapper">
+                            <input id="mountain-bell" name="sight" type="checkbox" value="mountain-bell">
+                            <label class="review-form__checkbox-label" for="mountain-bell">Гора-Колокол</label>
+                        </div>
+                        <div class="review-form__block--wrapper">
+                            <input id="red-rocks" name="sight" type="checkbox" value="red-rocks" checked>
+                            <label class="review-form__checkbox-label" for="red-rocks">Красные скалы</label>
+                        </div>
                     </div>
                 </fieldset>
-                <fieldset class="review-form__block  review-form__block--emotions">
-                    <legend class="review-form__block-title">Опишите свои эмоции:</legend>
+                <fieldset class="review-form__block  review-form__block--emotions  review-form__block--tablet-border">
+                    <legend class="review-form__block-title  review-form__block-title--tablet-width">Опишите свои эмоции:</legend>
                     <textarea class="block-title__emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
                 </fieldset>
-                <div class="form__wrapper-button">
-                    <button class="btn  btn-form" type="button">Отправить отзыв</button>
+                <div class="form__button-field">
+                    <div class="form__wrapper-button">
+                        <button class="btn  btn-form" type="button">Отправить отзыв</button>
+                    </div>
+                    <p class="obligatory-field">* — обязательные поля</p>
                 </div>
             </div>
         </form>
