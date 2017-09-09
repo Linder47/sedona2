@@ -410,6 +410,10 @@ body {
     width: 1200px;
     margin: 0 auto;
   }
+  .shadow {
+    margin: 0 auto;
+    box-shadow: 0px 0 40px 15px rgba(0, 0, 0, 0.05), 0px 0 40px 15px rgba(0, 0, 0, 0.05);
+  }
 }
 input[type="text"],
 textarea {
@@ -444,12 +448,6 @@ textarea {
   padding-top: 78px;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  /*  background-image: url("../img/intro-background@1x.jpg 1x");
-    @media @retina {
-        background-image: url("../img/intro-background@2x.jpg 2x");
-        background-size: 800px auto;
-    }
-    */
 }
 .logo-wrapper {
   height: 56px;
@@ -466,21 +464,18 @@ textarea {
   height: 385px;
   background-repeat: no-repeat;
   background-position: center bottom, 50% 25%;
-  background-image: url("../img/intro-triangle-mobile.svg"), url("../img/intro-background@1x.jpg");
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-header__logo__wrapper {
-    background-image: url("../img/intro-triangle-mobile@2x.svg"), url("../img/intro-background@2x.jpg");
-    background-size: 800px auto;
-  }
+  background-image: url("../img/intro-triangle-mobile@2x.svg"), url("../img/intro-background@2x.jpg");
+  background-size: 768px auto;
 }
 .page-header__logo__wrapper--other-pages {
   max-height: 160px;
   background-position: center bottom, 5% 70%;
 }
-.page-header__logo-text--other-pages svg {
+.page-header__logo-text--other-pages img {
   width: 100%;
   max-height: 39px;
+  padding: 42px 0 66px;
+  width: 229px;
 }
 .page-header__logo--other-pages {
   padding: 0;
@@ -499,7 +494,17 @@ textarea {
     height: 520px;
     width: 100%;
     background-position: center bottom, 50% 20%;
-    background-image: url("../img/intro-triangle-tablet.svg"), url("../img/intro-background@1x.jpg");
+    background-image: url("../img/intro-triangle-tablet@2x.svg"), url("../img/intro-background@2x.jpg");
+    background-size: 100% auto, 1200px auto;
+  }
+  .page-header__logo-text--other-pages img {
+    width: 100%;
+    max-height: 78px;
+    padding: 42px 0 66px;
+    width: 458px;
+  }
+  .page-header__logo__wrapper--other-pages {
+    padding-bottom: 130px;
   }
   .page-header__logo__wrapper--other-pages {
     height: 290px;
@@ -510,25 +515,16 @@ textarea {
     width: 458px;
     height: 78px;
   }
-}
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  .page-header__logo__wrapper {
-    background-image: url("../img/intro-triangle-tablet@2x.svg"), url("../img/intro-background@2x.jpg");
-    background-size: 800px auto;
+  .page-header__logo-text--other-pages img {
+    padding: 85px 0 66px;
   }
 }
 @media (min-width: 1280px) {
   .page-header__logo__wrapper {
-    background-image: url("../img/intro-triangle-desktop.svg"), url("../img/intro-background@1x.jpg");
+    background-image: url("../img/intro-triangle-desktop@2x.svg"), url("../img/intro-background@2x.jpg");
   }
   .page-header__logo__wrapper--other-pages {
     width: 100%;
-  }
-}
-@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1280px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  .page-header__logo__wrapper {
-    background-image: url("../img/intro-triangle-desktop@2x.svg"), url("../img/intro-background@2x.jpg");
-    background-size: 800px auto;
   }
 }
 .main-nav__list {
@@ -786,9 +782,20 @@ textarea {
 .introduce--other-pages {
   padding-bottom: 25px;
 }
+@media (max-width:767px) {
+  .introduce__text--form-tablet-desktop {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .introduce__text {
     padding-bottom: 40px;
+  }
+  .introduce-wrapper--form {
+    padding-bottom: 10px;
+  }
+  .introduce__text--form-mobile-only {
+    display: none;
   }
 }
 @media (min-width: 1280px) {
@@ -1709,7 +1716,7 @@ textarea {
 }
 .review-form__wrapper {
   width: 100%;
-  background-color: #dad;
+  background-color: #fff;
 }
 .review-form__block {
   padding: 20px;
@@ -1845,7 +1852,7 @@ textarea {
   background-color: #f2f2f2;
   border-radius: 50%;
   left: 0;
-  top: 5px;
+  top: -1px;
 }
 input[type=radio]:checked + .review-form__radio-label::before {
   background-color: #333;
@@ -1940,6 +1947,9 @@ input[type=checkbox]:checked + .review-form__checkbox-label::before {
 }
 .block--checkbox__wrapper {
   margin-top: 17px;
+}
+.review-form__phone-label--only-desktop {
+  display: none;
 }
 @media (max-width:767px) {
   .review-form__block-title--tablet-only,
@@ -2105,12 +2115,85 @@ input[type=checkbox]:checked + .review-form__checkbox-label::before {
   }
 }
 @media (min-width: 1280px) {
-  .review-form__block-error--tablet {
+  .review-form__block-error--tablet,
+  .review-form__block-title--tablet-only,
+  .review-form__phone-label {
     display: none;
   }
   .review-form__block-error--desktop {
     display: -webkit-box;
     display: flex;
     padding-bottom: 0;
+    margin-left: 86px;
+    margin-bottom: -3px;
+  }
+  .review-form__wrapper {
+    margin: 0 120px;
+  }
+  .review-form__block--name {
+    width: 400px;
+    right: 0;
+    margin-left: 80px;
+  }
+  .review-form__block-title--mobile-desktop {
+    display: inline-block;
+  }
+  .review-form__block--radio .review-form__block-title {
+    padding-left: 80px;
+  }
+  .review-form__radio-label::before {
+    left: 3px;
+  }
+  .review-form__radio-label {
+    padding-left: 79px;
+  }
+  .block--contacts__wrapper-display {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    width: 960px;
+  }
+  .block--contacts__wrapper-display .review-form__block--wrapper {
+    width: 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .review-form__phone-label--only-desktop {
+    display: inline-block;
+  }
+  .review-form__phone-label--only-desktop {
+    padding-right: 21px;
+    padding-top: 24px;
+  }
+  .review-form__block--contacts {
+    padding-top: 33px;
+  }
+  .review-form__block--contacts .review-form__mail-label {
+    padding-left: 0;
+    width: 164px;
+  }
+  .icon-mail__wrapper {
+    width: 316px;
+  }
+  .block--checkbox__wrapper {
+    flex-wrap: nowrap;
+    width: 960px;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  .review-form__block--checkbox {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 24px;
+  }
+  .block--checkbox__wrapper .review-form__block--wrapper {
+    width: 21%;
   }
 }

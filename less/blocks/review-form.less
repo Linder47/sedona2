@@ -4,7 +4,7 @@
 
 .review-form__wrapper {
     width: 100%;
-    background-color: #dad;
+    background-color: #fff;
 }
 
 .review-form__block {
@@ -120,6 +120,7 @@
 }
 
 .review-form__block--contacts  .review-form__phone-label,
+//.review-form__phone-label--only-desktop,
 .icon-phone__wrapper,
 .review-form__block--contacts  .review-form__mail-label,
 .icon-mail__wrapper
@@ -149,7 +150,7 @@
     background-color: @color-btn;
     border-radius: 50%;
     left: 0;
-    top: 5px;
+    top: -1px;
 }
 
 input[type=radio]:checked+.review-form__radio-label::before {
@@ -260,6 +261,10 @@ input[type=checkbox]:checked+.review-form__checkbox-label::before {
 
 .block--checkbox__wrapper {
     margin-top: 17px;
+}
+
+.review-form__phone-label--only-desktop {
+    display: none;
 }
 
 @media @mobile-width-only {
@@ -440,12 +445,94 @@ input[type=checkbox]:checked+.review-form__checkbox-label::before {
 }
 
 @media @desktop-width {
-    .review-form__block-error--tablet {
+    .review-form__block-error--tablet,
+    .review-form__block-title--tablet-only,
+    .review-form__phone-label {
         display: none;
     }
 
     .review-form__block-error--desktop {
         display: flex;
         padding-bottom: 0;
+        margin-left: 86px;
+        margin-bottom: -3px;
+    }
+
+    .review-form__wrapper {
+        margin: 0 120px;
+    }
+
+    .review-form__block--name {
+        width: 400px;
+        right: 0;
+        margin-left: 80px;
+    }
+
+    .review-form__block-title--mobile-desktop {
+        display: inline-block;
+    }
+
+    .review-form__block--radio  .review-form__block-title {
+        padding-left: 80px;
+    }
+
+    .review-form__radio-label::before {
+        left: 3px;
+    }
+
+    .review-form__radio-label {
+        padding-left: 79px;
+    }
+
+    .block--contacts__wrapper-display {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 960px;
+    }
+
+    .block--contacts__wrapper-display  .review-form__block--wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .review-form__phone-label--only-desktop {
+        display: inline-block;
+    }
+
+    .review-form__phone-label--only-desktop {
+        padding-right: 21px;
+        padding-top: 24px;
+    }
+
+    .review-form__block--contacts {
+        padding-top: 33px;
+    }
+
+    .review-form__block--contacts  .review-form__mail-label {
+        padding-left: 0;
+        width: 164px;
+    }
+
+    .icon-mail__wrapper {
+        width: 316px;
+    }
+
+    .block--checkbox__wrapper {
+        flex-wrap: nowrap;
+        width: 960px;
+        justify-content: space-between;
+    }
+
+    .review-form__block--checkbox {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 24px;
+    }
+
+    .block--checkbox__wrapper  .review-form__block--wrapper {
+        width: 21%;
     }
 }

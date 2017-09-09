@@ -48,7 +48,7 @@
         </symbol>
     </svg>
 
-    <div class="container">
+    <div class="container  shadow">
         <header class="page-header">
             <h1 class="visually-hidden">Седона</h1>
             <nav class="main-nav">
@@ -78,11 +78,11 @@
             <div class="page-header__logo__wrapper  page-header__logo__wrapper--other-pages">
                 <div class="page-header__logo  page-header__logo--other-pages">
                     <div class="page-header__logo-text  page-header__logo-text--other-pages">
-                        <!-- <picture>
+                        <picture>
                             <source media="(min-width: 1210px)" srcset="img/sedona-desktop@2x.svg">
                             <source media="(min-width: 768px)" srcset="img/SEDONA@2x.svg">
                             <img src="img/sedona-mobile@2x.svg" alt="Седона">
-                        </picture>-->
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -90,9 +90,10 @@
 
 
         <section class="introduce">
-            <div class="introduce-wrapper  introduce--other-pages  container ">
+            <div class="introduce-wrapper  introduce--other-pages  container  introduce-wrapper--form">
                 <h2 class="introduce__title">Оставьте свой отзыв</h2>
-                <p class="introduce__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                <p class="introduce__text  introduce__text--form-mobile-only">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                <p class="introduce__text  introduce__text--form-tablet-desktop">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях</p>
             </div>
         </section>
 
@@ -116,21 +117,24 @@
                 </fieldset>
                 <fieldset class="review-form__block  review-form__block--contacts  review-form__block--tablet-border">
                     <legend class="review-form__block-title  review-form__block-title--tablet-width">Контактная информация:</legend>
-                    <div class="review-form__block--wrapper">
-                        <p class="review-form__block-error  review-form__block-error--desktop">Ошибка, перепроверьте номер</p>
-                        <div class="line__wrapper">
-                            <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
-                            <p class="review-form__block-error  review-form__block-error--tablet">Ошибка, перепроверьте номер</p>
+                    <p class="review-form__block-error  review-form__block-error--desktop">Ошибка, перепроверьте номер</p>
+                    <div class="block--contacts__wrapper-display">
+                        <div class="review-form__block--wrapper">
+                            <div class="line__wrapper">
+                                <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
+                                <label class="review-form__phone-label--only-desktop" for="phone">Телефон:</label>
+                                <p class="review-form__block-error  review-form__block-error--tablet">Ошибка, перепроверьте номер</p>
+                            </div>
+                            <div class="icon-phone__wrapper">
+                                <input class="icon-phone" id="phone" type="tel" placeholder="Введите телефон">
+                            </div>
+                            <p class="review-form__block-error  review-form__block-error--mobile">Ошибка, перепроверьте номер</p>
                         </div>
-                        <div class="icon-phone__wrapper">
-                            <input class="icon-phone" id="phone" type="tel" placeholder="Введите телефон">
-                        </div>
-                        <p class="review-form__block-error  review-form__block-error--mobile">Ошибка, перепроверьте номер</p>
-                    </div>
-                    <div class="review-form__block--wrapper">
-                        <label class="review-form__mail-label" for="mail">Электронная почта:</label>
-                        <div class="icon-mail__wrapper">
-                            <input class="icon-mail" id="mail" type="text" placeholder="Введите e-mail">
+                        <div class="review-form__block--wrapper">
+                            <label class="review-form__mail-label" for="mail">Электронная почта:</label>
+                            <div class="icon-mail__wrapper">
+                                <input class="icon-mail" id="mail" type="text" placeholder="Введите e-mail">
+                            </div>
                         </div>
                     </div>
                 </fieldset>
