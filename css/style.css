@@ -416,12 +416,26 @@ body {
   }
 }
 input[type="text"],
+input[type="tel"],
 textarea {
   color: #000;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   text-transform: none;
+}
+::-webkit-input-placeholder {
+  color: #000000;
+}
+::-moz-placeholder {
+  color: #000000;
+}
+:-moz-placeholder {
+  color: #000000;
+}
+:-ms-input-placeholder {
+  color: #000000;
 }
 .visually-hidden {
   position: absolute;
